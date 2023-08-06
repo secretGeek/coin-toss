@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Coin-Toss Simulation</title>
+    <script type="text/javascript" src="./coin.js" defer></script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💸</text></svg>"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <h1>Coin-Toss-Simulation</h1>
+    <article>
+		<button id='btnStartStop' onclick="startStopGame(this)">▶️ play</button>
+		<button id='btnReset' onclick="resetGame(this)">🔁 reset</button>
+		<button id='btnFaster' onclick="faster(this)">➡️ faster</button>
+		<button id='btnMuchFaster' onclick="muchFaster(this)">⏩ faster+++</button>
+		<button id='btnSlower' onclick="slower(this)">⬅️ slower</button>
+		<button id='btnMuchSlower' onclick="muchSlower(this)">⏪ slower++++</button>
+		<header id="summary"></header>
+      <div id="board"></div>
+	  
+    </article>
+    <hr />
+    <article>
+    <h2>Description of game constants and values</h2>
+    <ul>
+    <li><code>Population:</code> <p>The number of participants. Though infact they are all independent players, who don't interact with each other.</p></li>
+    <li><code>WinPercent%:</code>  <p>In each coin toss, if you win, your wealth will grow by this percent.</p></li>
+    <li><code>LossPercent%:</code>  <p>In each coin toss, if you lose, your wealth will shrink by this percent.</p></li>
+    <li><code>Rounds:</code> <p>How many rounds have been played? A round consists of every player participating in 1 coin toss.</p></li>
+    <li><code>PlaySpeed:</code> <p>How fast is the simulation running.</p> </li>
+    <li><code>GiniCoefficient:</code> <p>A measure of the inequality of a population. 0 means perfect equality (everyone has the same wealth), 1 means perfect oligarchy (every has no money, except one person who has all the wealth)</p></li>
+    <li><code>TotalWealth:</code> Sum of each player's money. Initially the same as <code>populationSize * moneyPerPlayer</code>. If the "expected value" of each coin toss is > 0, then the total wealth will keep growing.</li>
+    </ul>
+    <p><a href='https://github.com/secretGeek/yard-sale#readme'>Source code and further explanation is on Github/@secretGeek/yard-sale</a></p>
+    </article>
+    <footer></footer>
+  </body>
+  <script></script>
+</html>

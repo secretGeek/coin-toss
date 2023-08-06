@@ -1,0 +1,4 @@
+edit: code .
+watch: tsc coin.ts --watch
+serve: browse "http://localhost:1234"; python -m http.server 1234;
+n .\README.md
